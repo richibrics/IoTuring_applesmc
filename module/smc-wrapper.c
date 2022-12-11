@@ -25,10 +25,10 @@ static PyMethodDef smc_methods[] = {
 
 static PyModuleDef smc_module = {
     PyModuleDef_HEAD_INIT,
-    "_smc",                       // name of module,
+    "ioturing_applesmc",                       // name of module,
     "Apple SMC low level module", // doc string
     -1,
     smc_methods // method table
 };
 
-PyMODINIT_FUNC PyInit__smc(void) { return PyModule_Create(&smc_module); }
+PyMODINIT_FUNC PyInit_ioturing_applesmc(void) { return PyModule_Create(&smc_module); }
