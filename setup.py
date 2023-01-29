@@ -2,7 +2,7 @@ from setuptools import Extension, setup
 
 setup(
     name='IoTuring_applesmc',
-    version="1.0.0",
+    version="v2023.1.1",
     ext_modules=[
         Extension(
             name='ioturing_applesmc',
