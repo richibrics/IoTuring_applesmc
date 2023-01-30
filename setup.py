@@ -1,13 +1,15 @@
-from setuptools import Extension, setup
+from setuptools import setup, Extension
 
-setup(
+ext = Extension(
+        name='ioturing_applesmc',
+        sources=['module/smc.c', 'module/smc-wrapper.c'],
+        extra_link_args=['-framework', 'IOKit'],
+    )
+
+setup_args = dict(
     name='IoTuring_applesmc',
-    version="v2023.1.1",
-    ext_modules=[
-        Extension(
-            name='ioturing_applesmc',
-            sources=['module/smc.c', 'module/smc-wrapper.c'],
-            extra_link_args=['-framework', 'IOKit'],
-        ),
-    ],
+    version="v2023.1.2",
+    ext_modules=[ext],
 )
+
+setup(**setup_args)
