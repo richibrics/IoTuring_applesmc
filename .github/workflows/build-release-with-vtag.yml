@@ -69,6 +69,7 @@ jobs:
        
   tagged-publish:
     name: "Tagged Publish"
+    needs: tagged-release
     runs-on: "ubuntu-latest"
     
     steps:

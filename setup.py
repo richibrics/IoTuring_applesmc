@@ -8,7 +8,7 @@ ext = Extension(
 
 setup_args = dict(
     name='IoTuring_applesmc',
-    version="v2023.1.2",
+    version="v2023.1.3",
     ext_modules=[ext],
 )
 
